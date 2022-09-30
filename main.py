@@ -1,6 +1,8 @@
 import discord
 import asyncio
 import os
+from replit import db
+from keep_alive import keep_alive
 
 intent = discord.Intents.default()
 intent.members = True
@@ -22,9 +24,9 @@ async def on_message(message):
   if message.content.startswith('!hi'):
     author = str(message.author)
     await message.channel.send('Hello ' + author.split("#")[0] + '!')
-  if msg[:3] == 'ne ':
+  if msg[:3] == 'ne ' or msg == 'ne' or msg == 'ne?':
     await asyncio.sleep(5)
     await message.channel.send('NENENENENENENENENENENENE')
 
-
+keep_alive()
 client.run(os.environ['TOKEN'])
