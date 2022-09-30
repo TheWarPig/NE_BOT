@@ -27,6 +27,10 @@ async def on_message(message):
   if msg[:3] == 'ne ' or msg == 'ne' or msg == 'ne?':
     await asyncio.sleep(5)
     await message.channel.send('NENENENENENENENENENENENE')
+  if msg[:4] == 'any ' or msg == 'any' or msg == 'any?':
+    await asyncio.sleep(5)
+    await message.channel.send('ANYANYANYANYANYANYANYANYANY')
+
 
 keep_alive()
 client.run(os.environ['TOKEN'])
