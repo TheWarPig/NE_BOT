@@ -2,7 +2,18 @@ import discord
 import asyncio
 import os
 from replit import db
+from threading import Thread
+from time import sleep
 from keep_alive import keep_alive
+
+def endless_job():
+    while True:
+    	print("p")
+    	sleep(600)
+
+
+job = Thread(target=endless_job)
+job.start()
 
 intent = discord.Intents.default()
 intent.members = True
