@@ -18,7 +18,8 @@ async def on_message(message):
   if message.author == client.user:
     return
   if message.content.startswith('!hi'):
-    await message.channel.send('Hello!')
+    author = str(message.author)
+    await message.channel.send('Hello ' + author.split("#",1)[0] + '!')
 
 
 client.run(os.environ['TOKEN'])
