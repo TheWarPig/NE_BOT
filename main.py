@@ -41,6 +41,9 @@ async def on_message(message):
   if msg[:4] == 'any ' or msg == 'any' or msg == 'any?':
     await asyncio.sleep(5)
     await message.channel.send('ANYANYANYANYANYANYANYANYANY')
+  if msg[:3] == 'ok ' or msg == 'ok' or msg == 'ok?':
+    await asyncio.sleep(5)
+    await message.channel.send('OOOOOOKKKKKKKK!!!!!!!')
 
 
 keep_alive()
